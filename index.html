@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculator</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <section class="calculator" aria-label="Calculator">
+      <header class="calc-header">
+        <h1>Calculator</h1>
+        <p class="hint">Keyboard supported: <kbd>0-9</kbd> <kbd>+</kbd> <kbd>-</kbd> <kbd>*</kbd> <kbd>/</kbd> <kbd>Enter</kbd> <kbd>Backspace</kbd> <kbd>Esc</kbd></p>
+      </header>
+
+      <div class="display" aria-live="polite">
+        <div class="expression" id="expression">&nbsp;</div>
+        <div class="result" id="result">0</div>
+      </div>
+
+      <div class="buttons" role="group" aria-label="Calculator buttons">
+        <button class="btn secondary" data-action="clear">AC</button>
+        <button class="btn secondary" data-action="delete">DEL</button>
+        <button class="btn secondary" data-action="operator" data-operator="/">÷</button>
+        <button class="btn secondary" data-action="operator" data-operator="*">×</button>
+
+        <button class="btn" data-action="number" data-number="7">7</button>
+        <button class="btn" data-action="number" data-number="8">8</button>
+        <button class="btn" data-action="number" data-number="9">9</button>
+        <button class="btn secondary" data-action="operator" data-operator="-">−</button>
+
+        <button class="btn" data-action="number" data-number="4">4</button>
+        <button class="btn" data-action="number" data-number="5">5</button>
+        <button class="btn" data-action="number" data-number="6">6</button>
+        <button class="btn secondary" data-action="operator" data-operator="+">+</button>
+
+        <button class="btn" data-action="number" data-number="1">1</button>
+        <button class="btn" data-action="number" data-number="2">2</button>
+        <button class="btn" data-action="number" data-number="3">3</button>
+        <button class="btn secondary equals" data-action="equals" style="grid-row: span 2;">=</button>
+
+        <button class="btn zero" data-action="number" data-number="0">0</button>
+        <button class="btn" data-action="dot">.</button>
+      </div>
+
+      <footer class="calc-footer">
+        <span id="error" class="error" aria-live="polite"></span>
+      </footer>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
+
